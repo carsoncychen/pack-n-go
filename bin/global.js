@@ -47,11 +47,16 @@ const questions = [
   }
 ]
 
-func.checkForPackageJson();
+if (!func.checkForPackageJson()) {
+  console.log('Requires package.json file, please set up the file and try again.')
+  process.exit();
+} else {
+  inquirer.prompt(questions)
+    .then((answers) => {
+      func.processAnswers(answers).then((newRules) => {
+        func.createWebPack(newRules)
+      });
+    })
+}
 
-inquirer.prompt(questions)
-.then((answers) => {
-  func.processAnswers(answers).then((newRules) => {
-    func.createWebPack(newRules)
-  });
-})
+
