@@ -1,0 +1,18 @@
+{
+  "name": "webpacking",
+  "version": "0.1.0",
+  "description": "simple way to create webpack config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "webpacking": "./bin/global.js"
+  },
+  "preferGlobal": true,
+  "author": "carsonc",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  }
+}
