@@ -11,9 +11,6 @@ const questions = [
     choices: [
       'React',
       'Vue',
-      'Angular',
-      'jQuery',
-      'ejs',
       'None'
     ]
   },
@@ -23,8 +20,7 @@ const questions = [
     message: 'What are you using for back end?',
     choices: [
       'Express',
-      'Flask',
-      'Django',
+      'Node',
       'None'
     ]
   },
@@ -51,7 +47,11 @@ const questions = [
   }
 ]
 
+func.checkForPackageJson();
+
 inquirer.prompt(questions)
 .then((answers) => {
-  func.processAnswers(answers);
+  func.processAnswers(answers).then((newRules) => {
+    func.createWebPack(newRules)
+  });
 })
