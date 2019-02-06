@@ -1,5 +1,5 @@
 {
-	"name": "webpacking",
+	"name": "not-create-react-app",
 	"version": "0.1.0",
 	"description": "simple way to create webpack config",
 	"main": "index.js",
@@ -7,23 +7,12 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"bin": {
-		"webpacking": "./bin/global.js"
+		"not-create-react-app": "./bin/global.js"
 	},
 	"preferGlobal": true,
 	"author": "carsonc",
 	"license": "MIT",
 	"dependencies": {
-		"inquirer": "^6.2.2",
-		"webpack": "^4.29.2",
-		"react": "^16.5.2",
-		"react-dom": "^16.5.2",
-		"@babel/core": "^7.2.2",
-		"@babel/preset-env": "^7.3.1",
-		"@babel/preset-react": "^7.0.0",
-		"babel-loader": "^8.0.5",
-		"express": "^4.16.4",
-		"pg-promise": "^8.5.5",
-		"css-loader": "^2.1.0",
-		"style-loader": "^0.23.1"
+		"inquirer": "^6.2.2"
 	}
 }
